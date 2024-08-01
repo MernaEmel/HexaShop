@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @RenderSection("Scripts",required:false)
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>HexaShop - @ViewData["Title"]</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+   
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="~/css/css/font-awesome.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/myshop.styles.css" asp-append-version="true">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+          rel="stylesheet">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="~/css/css/templatemo-hexashop.css">
+    <link rel="stylesheet" href="~/css/css/owl-carousel.css">
+    <link rel="stylesheet" href="~/css/css/lightbox.css">
+    <link rel="stylesheet" href="~/css/icons/css/all.min.css">
+    <link rel="stylesheet" href="~/css/icons/css/brands.min.css">
+    <link rel="stylesheet" href="~/css/icons/css/fontawesome.min.css">
+    <link rel="stylesheet" href="~/css/icons/css/regular.min.css">
+    <link rel="stylesheet" href="~/css/icons/css/solid.min.css">
+    <link rel="stylesheet" href="~/css/icons/css/svg-with-js.min.css">
+    <link rel="stylesheet" href="~/css/icons/css/v4-font-face.min.css">
+    <link rel="stylesheet" href="~/css/icons/css/v4-shims.min.css">
+    <link rel="stylesheet" href="~/css/icons/css/v5-font-face.min.css">
+    
+
+    <!-- Template specific styles and scripts -->
+    <!--
+    TemplateMo 571 Hexashop
+    https://templatemo.com/tm-571-hexashop
+    -->
+</head>
+
+<body>
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="~/images/images/logo.png" alt="Logo">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a asp-controller="Home" asp-action="Index">Home</a></li>
+                            <li class="submenu">
+                                <a href="javascript:;">Men's</a>
+                                <ul>
+
+                                    <li><a asp-controller="Products" asp-action="JacketsShop">Jackets</a></li>
+                                    <li><a asp-controller="Products" asp-action="ShirtsShop">Shirts</a></li>
+                                    <li><a asp-controller="Products" asp-action="ShortsShop">Shorts</a></li>
+                                    <li><a asp-controller="Products" asp-action="PantsShop">Pants</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="submenu">
+                                <a href="javascript:;">Women's</a>
+                                <ul>
+
+                                    <li><a asp-controller="Products" asp-action="DressShop">Dresses</a></li>
+                                    <li><a asp-controller="Products" asp-action="TopsShop">Tops</a></li>
+                                    <li><a asp-controller="Products" asp-action="BagsShop">Bags</a></li>
+                                    <li><a asp-controller="Products" asp-action="SneakersShop">Sneakers</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="submenu">
+                                <a href="javascript:;">Kid's</a>
+                                <ul>
+
+                                    <li><a asp-controller="Products" asp-action="GirlsShop">Girls</a></li>
+                                    <li><a asp-controller="Products" asp-action="BoysShop">Boys</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="submenu">
+                                <a href="javascript:;">Pages</a>
+                                <ul>
+                                  
+                                    <li><a asp-controller="Products" asp-action="Index">Products</a></li>
+                                    <li><a asp-controller="Products" asp-action="Cart">Cart</a></li>
+                            
+                                    <li><a asp-controller="Home"asp-action="Contact">Contact Us</a></li>
+                                    <li><a asp-controller="Home" asp-action="About">About Us</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="scroll-to-section"><a asp-controller="Products" asp-action="Cart"><i class="fa-solid fa-cart-shopping"></i>[@ViewData["Counter"]]</a></li>
+                               <li <partial name="_LoginPartial" /></li>
+                            
+                        </ul>
+                        <a class="menu-trigger">
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                      
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+    <!-- Render the body content here -->
+    @RenderBody()
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="first-item">
+                        <div class="logo">
+                            <img src="~/images/images/white-logo.png" alt="White Logo">
+                        </div>
+                        <ul>
+                            <li><a href="#">16501 Collins Ave, Sunny Isles Beach, FL 33160, United States</a></li>
+                            <li><a href="#">hexashop@company.com</a></li>
+                            <li><a href="#">010-020-0340</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Shopping & Categories</h4>
+                    <ul>
+                        <li><a href="#">Men’s Shopping</a></li>
+                        <li><a href="#">Women’s Shopping</a></li>
+                        <li><a href="#">Kid's Shopping</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="#">Homepage</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4>Help & Information</h4>
+                    <ul>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">FAQ's</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Tracking ID</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-12">
+                    <div class="under-footer">
+                       
+                        <ul>
+                            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ***** Footer End ***** -->
+    <!-- jQuery -->
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- Plugins -->
+    <script src="~/js/js/owl-carousel.js"></script>
+    <script src="~/js/js/accordions.js"></script>
+    <script src="~/js/js/datepicker.js"></script>
+    <script src="~/js/js/scrollreveal.min.js"></script>
+    <script src="~/js/js/waypoints.min.js"></script>
+    <script src="~/js/js/jquery.counterup.min.js"></script>
+    <script src="~/js/js/imgfix.min.js"></script>
+    <script src="~/js/js/slick.js"></script>
+    <script src="~/js/js/lightbox.js"></script>
+    <script src="~/js/js/isotope.js"></script>
+    <!-- Custom Script -->
+    <script src="~/js/js/custom.js"></script>
+
+    <script>
+        $(function () {
+            var selectedClass = "";
+            $("p").click(function () {
+                selectedClass = $(this).attr("data-rel");
+                $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("." + selectedClass).fadeOut();
+                setTimeout(function () {
+                    $("." + selectedClass).fadeIn();
+                    $("#portfolio").fadeTo(50, 1);
+                }, 500);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

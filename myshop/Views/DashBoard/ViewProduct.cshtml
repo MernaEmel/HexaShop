@@ -1,0 +1,60 @@
+﻿@{
+    Layout = "_DashBoard";
+}
+<div class="dash-content">
+    <div class="overview">
+        <div class="title">
+            <i class="uil uil-tachometer-fast-alt"></i>
+            <span class="text">All Product</span>
+        </div>
+    </div>
+    <div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td class="table-light">id</td>
+                    <td class="table-light">Name</td>
+                    <td class="table-light">price</td>
+                    <td class="table-light">Quantity</td>
+                    <td class="table-light">operation</td>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <img src="~/images/newImages/@item.ImagePath" width="80" height="60 " class="img-thumbnail rounded-circle"/>
+                        </td>
+                        <td>@item.Name</td>
+                        <td>@item.Price</td>
+                        <td>@item.Quantity</td>
+
+                        <td>
+
+
+                            <a class="btn btn-success" role="button" asp-controller="DashBoard" asp-action="EditProduct" asp-route-id="@item.Id">
+                                <span class="material-symbols-outlined">
+                                    Edit
+                                </span>
+                            </a>
+                            <a class="btn btn-danger " role="button" asp-action="DeleteProduct" asp-route-id="@item.Id">
+                                <span class="material-symbols-outlined">
+                                    Delete
+                                </span>
+                            </a>
+                        </td>
+
+                    </tr>
+                }
+               
+            </tbody>
+        </table>
+
+    </div>
+
+
+
+
+</div>
